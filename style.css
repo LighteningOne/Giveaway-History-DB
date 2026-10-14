@@ -1,5 +1,5 @@
 :root {
-    --bg-color: #0d1117; /* Standard GitHub dark mode background */
+    --bg-color: #0d1117;
     --card-bg: #161b22;
     --text-main: #c9d1d9;
     --text-muted: #8b949e;
@@ -82,64 +82,67 @@ body {
     color: var(--text-muted);
 }
 
-/* Giveaway Grid */
-.giveaway-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-/* Card Styling */
-.card {
+/* Search Bar */
+.search-bar {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px 20px;
+    margin-top: 1.5rem;
     background-color: var(--card-bg);
     border: 1px solid var(--border);
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.2s, border-color 0.2s;
+    border-radius: 6px;
+    color: var(--text-main);
+    font-size: 1rem;
 }
-
-.card:hover {
-    transform: translateY(-4px);
+.search-bar:focus {
+    outline: none;
     border-color: var(--accent);
 }
 
-.card-img {
+/* Table Layout */
+.table-container {
+    overflow-x: auto;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+.giveaway-table {
     width: 100%;
-    height: 160px;
-    background-color: var(--border);
-    object-fit: cover;
+    border-collapse: collapse;
+    text-align: left;
 }
-
-.card-content {
-    padding: 1.5rem;
+.giveaway-table th, .giveaway-table td {
+    padding: 16px;
+    border-bottom: 1px solid var(--border);
 }
-
-.card-title {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-}
-
-.card-meta {
-    display: flex;
-    justify-content: space-between;
-    color: var(--text-muted);
-    font-size: 0.875rem;
-    margin-bottom: 1rem;
-}
-
-.claim-btn {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    text-align: center;
-    background-color: var(--accent);
-    color: #0d1117;
-    text-decoration: none;
-    border-radius: 6px;
+.giveaway-table th {
+    background-color: #1c2128;
     font-weight: 600;
-    transition: opacity 0.2s;
+    color: var(--text-muted);
+}
+.giveaway-table tbody tr:hover {
+    background-color: #1c2128;
 }
 
-.claim-btn:hover {
-    opacity: 0.9;
+/* Badges & Links */
+.badge {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
 }
+.epic-badge { background-color: var(--epic); color: white; border: 1px solid #555; }
+.steam-badge { background-color: var(--steam); color: white; border: 1px solid #555; }
+
+.steam-link {
+    color: var(--accent);
+    text-decoration: none;
+}
+.steam-link:hover {
+    text-decoration: underline;
+}
+
+/* Reviews */
+.review-score.positive { color: #57a54a; }
+.review-score.mixed { color: #b9a074; }
+.review-score.negative { color: #cc3628; }
