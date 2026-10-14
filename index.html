@@ -1,59 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giveaway History DB</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <!-- Navigation -->
-    <nav class="navbar">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="steam.html" class="nav-link">
-            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Steam</title><path d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.005.105.005.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 15.27C1.862 20.307 6.486 24 11.979 24c6.627 0 12-5.373 12-12s-5.373-12-12-12z"/></svg>
-            Steam
-        </a>
-        <a href="epic.html" class="nav-link">
-            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Epic Games</title><path d="M8.761 17.653V24h6.478v-6.347zM24 6.347V0h-6.478v6.347zM8.761 0v6.347H2.283v5.184H0V0zM24 17.653v-5.185h-2.283v5.185zM21.717 12.468v-6.121h-6.478v6.121zM8.761 11.532v6.121h6.478v-6.121zM2.283 17.653H8.76v6.347H0v-6.347z"/></svg>
-            Epic
-        </a>
-        <a href="gog.html" class="nav-link">
-            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GOG.com</title><path d="M12.42 16.295c-1.398 0-2.342-.71-2.607-1.922h2.247c.123.364.388.583.79.583.504 0 .862-.317.862-.756 0-.416-.27-.677-1.077-.853l-.84-.183c-1.564-.338-2.316-1.286-2.316-2.585 0-1.47 1.252-2.508 3.013-2.508 1.636 0 2.85 1.056 2.975 2.524h-2.146c-.11-.532-.423-.84-.823-.84-.423 0-.742.316-.742.71 0 .393.264.62 1.05.795l.848.188c1.554.34 2.33 1.272 2.33 2.592.002 1.498-1.196 2.255-3.564 2.255zm-6.242 0c-2.472 0-3.953-1.638-3.953-4.14 0-2.525 1.482-4.145 3.96-4.145 1.764 0 3.037.892 3.528 2.26l-2.028.796c-.233-.53-.706-.888-1.425-.888-1.21 0-1.854.982-1.854 1.977 0 .984.643 1.956 1.84 1.956.8 0 1.24-.26 1.344-.652H6.18v-1.74h3.693c.045 1.574-.29 2.503-1.075 3.32-.73.75-1.664 1.256-2.62 1.256zm12.33 0c-2.395 0-3.94-1.638-3.94-4.14 0-2.525 1.48-4.145 3.965-4.145 1.77 0 3.045.892 3.535 2.26l-2.036.796c-.234-.53-.71-.888-1.432-.888-1.213 0-1.855.982-1.855 1.977 0 .984.643 1.956 1.843 1.956.762 0 1.21-.24 1.32-.612h-1.42v-1.768h3.695v4.305h-1.886v-1.1c-.553.86-1.572 1.36-2.79 1.36z"/></svg>
-            GOG
-        </a>
-        <a href="prime.html" class="nav-link">
-            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Prime Gaming</title><path d="M21.577 6.444A14.622 14.622 0 0 0 12.01.272C8.04.28 4.601 2.373 2.508 5.437l9.53 10.15 9.539-9.143zM3.483 17.585 24 14.73c-2.378 4.743-7.054 8.271-12.784 8.97a14.155 14.155 0 0 1-5.127-.638l.68-2.65a12.748 12.748 0 0 0 5.45.626 13.064 13.064 0 0 0 10.456-7.859l-10.665 2.505-8.527-8.24c-.66.86-.94 1.97-.98 3.193-.05 1.464.38 3.02 1.258 4.398l1.385-2.072 1.398 2.213.94-1.12z"/></svg>
-            Prime
-        </a>
-    </nav>
-
-    <!-- Main Content -->
+<!-- Main Content -->
     <main class="container">
         <header class="page-header">
-            <h1>Active Giveaways</h1>
-            <p>A consolidated database tracking the latest freebies and bundles across all major storefronts.</p>
+            <h1>Giveaway History Database</h1>
+            <p>Search historical freebies and bundles across all major storefronts.</p>
+            
+            <!-- Search Bar -->
+            <input type="text" id="searchInput" class="search-bar" placeholder="Search for a game...">
         </header>
 
-        <!-- This is where the Python script will inject the actual deals -->
-        <div class="giveaway-grid" id="giveaway-container">
-            
-            <!-- Example Card Layout (Mockup) -->
-            <article class="card">
-                <img src="https://via.placeholder.com/400x200/30363d/8b949e?text=Game+Thumbnail" alt="Game Title" class="card-img">
-                <div class="card-content">
-                    <div class="card-meta">
-                        <span>Epic Games</span>
-                        <span>Ends: Oct 20</span>
-                    </div>
-                    <h2 class="card-title">Example Free Game</h2>
-                    <a href="#" class="claim-btn">Claim Now</a>
-                </div>
-            </article>
-            
+        <!-- Historical Data Table -->
+        <div class="table-container">
+            <table class="giveaway-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Game Name</th>
+                        <th>Storefront</th>
+                        <th>Steam Page</th>
+                        <th>Steam Review</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <!-- Mockup Row (This is what the script will generate automatically) -->
+                    <tr>
+                        <td>2026-10-14</td>
+                        <td><strong>Example Free Game</strong></td>
+                        <td><span class="badge epic-badge">Epic Games</span></td>
+                        <td><a href="https://store.steampowered.com/app/12345" target="_blank" class="steam-link">View Store</a></td>
+                        <td><span class="review-score positive">Very Positive (8,432)</span></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </main>
-
-</body>
-</html>
